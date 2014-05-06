@@ -1,0 +1,4 @@
+db/
+files/
+.vagrant
+provisioning/docker*

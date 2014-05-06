@@ -1,0 +1,28 @@
+---
+www_root: /srv/www
+
+# Define your WordPress sites here
+wordpress_sites:
+  - site_name: ansiblewp.dev
+    site_hosts:
+      - 192.168.50.10
+      - ansiblewp.dev
+    user: vagrant
+    group: www-data
+    site_install: true
+    site_title: ansiblewp
+    admin_user: admin
+    admin_password: admin
+    admin_email: admin@ansiblewp.dev
+    system_cron: true
+    run_composer: true
+    multisite:
+      enabled: false
+    env:
+      wp_home: http://ansiblewp.dev
+      wp_siteurl: http://ansiblewp.dev/wp
+      wp_env: development
+      db_name: ansiblewp_dev
+      db_user: ansiblewp_dbuser
+      db_password: ansiblewp
+
